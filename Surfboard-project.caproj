@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Surfboard-project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>ivj45t2qchpb</unique-id>
+    <saved-with-version>24500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="GameAnalytics" id="GameAnalytics" version="1">GameAnalytics</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Chris Hackmann (aka linkman2004)" id="MagiCam" version="6.5">MagiCam</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Comment" version="0.100000001">Comments</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Hash" version="0.5">JSON</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_jsshell" version="1">JS Shell</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Twitter" version="1">Twitter</plugin>
+        <plugin author="Wastrel" id="wastrel_switchcase" version="1">SwitchCase</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Objs">
+            <object-folder name="DataGathering">
+                <object-type name="GameAnalytics" sid="533892360908749">
+                    <plugin id="GameAnalytics" />
+                </object-type>
+                <object-type name="GM" sid="500942547634789">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712268855092636" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="C:\Users\Email\Documents\ShareX\Screenshots\2017-07\chrome_2017-07-10_12-25-10.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="LoginScreen" />
+            <object-folder name="GameMap">
+                <object-type name="TiledBackground3" sid="878365430259554">
+                    <plugin id="TiledBg" />
+                    <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
+                </object-type>
+                <object-type name="TiledBackground" sid="535699574927535">
+                    <plugin id="TiledBg" />
+                    <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-type name="playerdebug" sid="177537848774688">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="523180259691224">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709882233746710" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="100264936707828">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="MagiCam" sid="756503261018827">
+            <plugin id="MagiCam" />
+        </object-type>
+        <object-type name="Comments" sid="186627478688061">
+            <plugin id="Rex_Comment" />
+        </object-type>
+        <object-type global="1" name="JSShell" sid="465464603425879">
+            <plugin id="Rex_jsshell" />
+        </object-type>
+        <object-type name="Browser" sid="799162292235442">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Touch" sid="134456310206624">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Twitter" sid="880626584494496">
+            <plugin id="Twitter" />
+        </object-type>
+        <object-type name="Facebook" sid="469593951889527">
+            <plugin id="Facebook" />
+        </object-type>
+        <object-type global="1" name="JSON" sid="793515423051469">
+            <plugin id="Rex_Hash" />
+        </object-type>
+        <object-type global="1" name="SwitchCase" sid="716503536281754">
+            <plugin id="wastrel_switchcase" />
+        </object-type>
+        <object-type name="LocalStorage" sid="204988673951358">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="GameAnalytics2" sid="453905319117395">
+            <plugin id="GameAnalytics" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>GameMap.xml</layout>
+        <layout>LoginScreen.xml</layout>
+        <layout>Item Refrence.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game_Map[E].xml</event-sheet>
+        <event-sheet>LoginScreen[E].xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="7" />
+        <global-instance type="MagiCam" uid="4" />
+        <global-instance type="Comments" uid="8" />
+        <global-instance type="Browser" uid="10" />
+        <global-instance type="Touch" uid="11">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Facebook" uid="13">
+            <properties>
+                <app-id></app-id>
+                <app-secret></app-secret>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="16" />
+        <global-instance type="GameAnalytics2" uid="1">
+            <properties>
+                <build>0.1</build>
+                <custom-user-id></custom-user-id>
+                <enable-manual-session-handling>False</enable-manual-session-handling>
+                <enable-info-log>True</enable-info-log>
+                <enable-verbose-log>False</enable-verbose-log>
+                <game-key></game-key>
+                <secret-key></secret-key>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="deepstream.min.js" />
+    </files-folder>
+</c2project>
