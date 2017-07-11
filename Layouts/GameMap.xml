@@ -223,6 +223,11 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -233,7 +238,7 @@
                         <width>153.600006104</width>
                         <height>51.99200058</height>
                         <depth>0</depth>
-                        <hotspotX>0.423333347</hotspotX>
+                        <hotspotX>0.194999993</hotspotX>
                         <hotspotY>0.484536082</hotspotY>
                         <angle>0.183037728</angle>
                         <opacity>1</opacity>

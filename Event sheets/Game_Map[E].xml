@@ -113,16 +113,52 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="165527878105743" title="Stats">
+            <sub-events>
+                <variable constant="0" name="var_MovSpd" sid="427712744437680" static="0" type="number">0</variable>
+                <variable constant="0" name="var_RotSpd" sid="720063938728990" static="0" type="number">0</variable>
+                <variable constant="0" name="var_WaveLngth" sid="780992017991591" static="0" type="number">0</variable>
+                <variable constant="0" name="var_WaveWidth" sid="864727878740583" static="0" type="number">0</variable>
+                <event-block sid="786190922007324">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="926322948883590" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="974691263515729" title="Movement">
             <sub-events>
                 <event-block sid="904927474312348">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="467457436651244" type="System" />
+                        <condition id="2" name="Mouse button is down" sid="160958985793145" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-22" name="Set angle toward position" sid="609503889100085" type="playerdebug">
-                            <param id="0" name="X">Mouse.X</param>
-                            <param id="1" name="Y">Mouse.Y</param>
+                        <action id="-21" name="Rotate toward position" sid="720389367878496" type="playerdebug">
+                            <param id="0" name="Degrees">1.5</param>
+                            <param id="1" name="X">mouse.X</param>
+                            <param id="2" name="Y">mouse.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="820998027328032" type="playerdebug">
+                            <param id="0" name="Speed">350</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994548806165364">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="527489284622332" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Rotate toward position" sid="546107194500013" type="playerdebug">
+                            <param id="0" name="Degrees">1</param>
+                            <param id="1" name="X">mouse.X</param>
+                            <param id="2" name="Y">mouse.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="429775551517247" type="playerdebug">
+                            <param id="0" name="Speed">250</param>
                         </action>
                     </actions>
                 </event-block>

@@ -27,6 +27,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
@@ -86,13 +87,16 @@
         <object-type name="playerdebug" sid="177537848774688">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Bullet" sid="254975511579454">
+                <behavior-type name="Bullet" sid="790186680418995">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="340329310600604">
+                    <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709882233746710" speed="5">
-                    <frame duration="1" hotspotX="0.423333" hotspotY="0.484536">
+                    <frame duration="1" hotspotX="0.195" hotspotY="0.484536">
                         <collision-poly>
                             <point x="0" y="1" />
                             <point x="0" y="0" />
