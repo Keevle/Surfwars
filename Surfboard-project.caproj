@@ -211,5 +211,11 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file name="deepstream.min.js" />
+        <file name="firstboard.png" />
+        <file name="level_4.png" />
+        <file name="level_5.png" />
+        <file name="level_6.png" />
+        <file name="level2.png" />
+        <file name="level3.png" />
     </files-folder>
 </c2project>
