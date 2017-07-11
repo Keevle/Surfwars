@@ -127,7 +127,7 @@
         <object-type name="LocalStorage" sid="204988673951358">
             <plugin id="LocalStorage" />
         </object-type>
-        <object-type name="GameAnalytics2" sid="453905319117395">
+        <object-type name="GameAnalytics2" sid="171441890981493">
             <plugin id="GameAnalytics" />
         </object-type>
     </object-folder>
@@ -158,7 +158,7 @@
             </properties>
         </global-instance>
         <global-instance type="LocalStorage" uid="16" />
-        <global-instance type="GameAnalytics2" uid="1">
+        <global-instance type="GameAnalytics2" uid="2">
             <properties>
                 <build>0.1</build>
                 <custom-user-id></custom-user-id>
