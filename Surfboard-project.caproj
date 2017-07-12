@@ -20,12 +20,15 @@
         <plugin author="Rex.Rainbow" id="Rex_Hash" version="0.5">JSON</plugin>
         <plugin author="Rex.Rainbow" id="Rex_jsshell" version="1">JS Shell</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Twitter" version="1">Twitter</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Wastrel" id="wastrel_switchcase" version="1">SwitchCase</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
     </used-behaviors>
@@ -85,7 +88,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-type name="playerdebug" sid="177537848774688">
+        <object-type name="obj_Player" sid="177537848774688">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Bullet" sid="790186680418995">
@@ -175,6 +178,22 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="hud_BoostBar" sid="990915286234897">
+            <plugin id="progressbar" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="450043466324467">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="txt_ProgressDebug" sid="187816232498971">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="466762975292632">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families />
