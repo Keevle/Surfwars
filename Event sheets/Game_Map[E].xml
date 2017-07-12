@@ -67,19 +67,19 @@
             <sub-events>
                 <event-block sid="764810674988713">
                     <conditions>
-                        <condition id="8" name="On mouse wheel" sid="753568223850921" type="Mouse">
-                            <param id="0" name="Direction">0</param>
+                        <condition id="2" name="Mouse button is down" sid="753568223850921" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="799751113766591" type="System">
                             <param id="0" name="Variable">var_CamScale</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0.4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Subtract from" sid="268792434216567" type="System">
+                        <action id="-9" name="Set value" sid="268792434216567" type="System">
                             <param id="0" name="Variable">var_CamScale</param>
-                            <param id="1" name="Value">0.1</param>
+                            <param id="1" name="Value">0.35</param>
                         </action>
                         <action id="301" name="Transition to zoom level" sid="802168504213340" type="MagiCam">
                             <param id="0" name="Name">&quot;&quot;</param>
@@ -88,23 +88,24 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="645866744569054">
+                <event-block sid="631514432551770">
                     <conditions>
-                        <condition id="8" name="On mouse wheel" sid="240764665474792" type="Mouse">
-                            <param id="0" name="Direction">1</param>
+                        <condition id="-22" name="Else" sid="749667848767028" type="System" />
+                        <condition id="2" inverted="1" name="Mouse button is down" sid="398168685470389" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="700727194453745" type="System">
+                        <condition id="-14" name="Compare variable" sid="344870727702108" type="System">
                             <param id="0" name="Variable">var_CamScale</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">0.6</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0.35</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="926461008918111" type="System">
+                        <action id="-9" name="Set value" sid="524183553303400" type="System">
                             <param id="0" name="Variable">var_CamScale</param>
-                            <param id="1" name="Value">0.1</param>
+                            <param id="1" name="Value">0.4</param>
                         </action>
-                        <action id="301" name="Transition to zoom level" sid="693506210898269" type="MagiCam">
+                        <action id="301" name="Transition to zoom level" sid="587777052661597" type="MagiCam">
                             <param id="0" name="Name">&quot;&quot;</param>
                             <param id="1" name="Zoom">var_CamScale</param>
                             <param id="2" name="Duration">0.5</param>
@@ -137,28 +138,34 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="820998027328032" type="playerdebug">
+                            <param id="0" name="Speed">350</param>
+                        </action>
                         <action id="-21" name="Rotate toward position" sid="720389367878496" type="playerdebug">
                             <param id="0" name="Degrees">1.5</param>
                             <param id="1" name="X">mouse.X</param>
                             <param id="2" name="Y">mouse.Y</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="820998027328032" type="playerdebug">
-                            <param id="0" name="Speed">350</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="994548806165364">
                     <conditions>
                         <condition id="-22" name="Else" sid="527489284622332" type="System" />
+                        <condition id="2" inverted="1" name="Mouse button is down" sid="787807698352012" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="486323991723531" type="System">
+                            <param id="0" name="Interval (seconds)">0.03</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Rotate toward position" sid="546107194500013" type="playerdebug">
-                            <param id="0" name="Degrees">1</param>
-                            <param id="1" name="X">mouse.X</param>
-                            <param id="2" name="Y">mouse.Y</param>
-                        </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="429775551517247" type="playerdebug">
                             <param id="0" name="Speed">250</param>
+                        </action>
+                        <action id="-21" name="Rotate toward position" sid="546107194500013" type="playerdebug">
+                            <param id="0" name="Degrees">1.5</param>
+                            <param id="1" name="X">mouse.X</param>
+                            <param id="2" name="Y">mouse.Y</param>
                         </action>
                     </actions>
                 </event-block>
