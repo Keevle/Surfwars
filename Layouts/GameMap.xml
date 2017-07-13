@@ -296,11 +296,11 @@
                         <x>1136</x>
                         <y>853</y>
                         <z>0</z>
-                        <width>135.724960327</width>
-                        <height>80.95664978</height>
+                        <width>137.518676758</width>
+                        <height>84.783256531</height>
                         <depth>0</depth>
-                        <hotspotX>0.500440538</hotspotX>
-                        <hotspotY>0.500738561</hotspotY>
+                        <hotspotX>0.500869572</hotspotX>
+                        <hotspotY>0.500705242</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -316,7 +316,7 @@
                 <x>0</x>
                 <y>0</y>
             </parallax>
-            <zoom-rate>1</zoom-rate>
+            <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
@@ -346,8 +346,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>83</x>
-                        <y>348</y>
+                        <x>102</x>
+                        <y>984</y>
                         <z>0</z>
                         <width>201</width>
                         <height>33</height>
@@ -382,8 +382,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>153</x>
-                        <y>317</y>
+                        <x>183</x>
+                        <y>953</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -420,8 +420,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>18</x>
-                        <y>8</y>
+                        <x>41</x>
+                        <y>36</y>
                         <z>0</z>
                         <width>452</width>
                         <height>364</height>

@@ -44,8 +44,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>1920</width>
+        <height>1080</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -132,7 +132,18 @@
             </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709882233746710" speed="5">
-                    <frame duration="1" hotspotX="0.490017" hotspotY="0.488613" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Surfer.io-master\Art assets\Shark Attack board.png" />
+                    <frame duration="1" hotspotX="0.490017" hotspotY="0.488613" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Surfer.io-master\Art assets\Shark Attack board.png">
+                        <collision-poly>
+                            <point x="0.022818" y="0.302277" />
+                            <point x="0.214489" y="0.0538302" />
+                            <point x="0.84227" y="0.0331263" />
+                            <point x="0.980605" y="0.329193" />
+                            <point x="0.98802" y="0.616977" />
+                            <point x="0.857387" y="0.968944" />
+                            <point x="0.204792" y="0.938924" />
+                            <point x="0.0193953" y="0.697723" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -221,16 +232,16 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432333385628008" speed="5">
-                    <frame duration="1" hotspotX="0.500441" hotspotY="0.500739" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Surfer.io-master\Art assets\Wood.png">
+                    <frame duration="1" hotspotX="0.50087" hotspotY="0.500705" original-source="C:\Users\Test\Desktop\Game Development\Trash.io\Trashio\Art assets\Wood.png">
                         <collision-poly>
-                            <point x="0.146487" y="0.146487" />
-                            <point x="0.499253" y="0" />
-                            <point x="0.853513" y="0.146487" />
-                            <point x="1" y="0.499253" />
-                            <point x="0.853513" y="0.853513" />
-                            <point x="0.499253" y="1" />
-                            <point x="0.146487" y="0.853513" />
-                            <point x="0" y="0.499253" />
+                            <point x="0.0473566" y="0.379209" />
+                            <point x="0.738384" y="0.0380818" />
+                            <point x="0.841339" y="0.115457" />
+                            <point x="0.973913" y="0.225628" />
+                            <point x="0.978061" y="0.306849" />
+                            <point x="0.0357747" y="0.963329" />
+                            <point x="0.192574" y="0.643358" />
+                            <point x="0.0471566" y="0.654521" />
                         </collision-poly>
                     </frame>
                 </animation>

@@ -6,7 +6,7 @@
         <variable constant="0" name="Debug" sid="907603791525379" static="0" type="number">0</variable>
         <variable constant="0" name="exp_multi" sid="381544514281501" static="0" type="number">0</variable>
         <variable constant="0" name="clientid" sid="464033409579640" static="0" type="number">0</variable>
-        <variable constant="0" name="var_CamScale" sid="945964702817877" static="0" type="number">0.4</variable>
+        <variable constant="0" name="var_CamScale" sid="945964702817877" static="0" type="number">0.5</variable>
         <event-group description="" sid="615628593897822" title="OnStartEvents">
             <sub-events>
                 <event-block sid="197549512418868">
@@ -90,7 +90,7 @@
                         <condition id="-14" name="Compare variable" sid="633163765184186" type="System">
                             <param id="0" name="Variable">var_CamScale</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0.35</param>
+                            <param id="2" name="Value">0.45</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -108,7 +108,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="524183553303400" type="System">
                                     <param id="0" name="Variable">var_CamScale</param>
-                                    <param id="1" name="Value">0.4</param>
+                                    <param id="1" name="Value">0.5</param>
                                 </action>
                                 <action id="301" name="Transition to zoom level" sid="587777052661597" type="MagiCam">
                                     <param id="0" name="Name">&quot;&quot;</param>
@@ -124,7 +124,7 @@
                         <condition id="-14" name="Compare variable" sid="235324598434893" type="System">
                             <param id="0" name="Variable">var_CamScale</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0.4</param>
+                            <param id="2" name="Value">0.5</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -142,7 +142,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="268792434216567" type="System">
                                     <param id="0" name="Variable">var_CamScale</param>
-                                    <param id="1" name="Value">0.35</param>
+                                    <param id="1" name="Value">0.45</param>
                                 </action>
                                 <action id="301" name="Transition to zoom level" sid="802168504213340" type="MagiCam">
                                     <param id="0" name="Name">&quot;&quot;</param>
@@ -180,6 +180,10 @@
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="741306117540006" type="System">
                             <param id="0" name="Interval (seconds)">0.025</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="606359291408002" type="hud_BoostBar">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
