@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_Map[E]</name>
     <events>
+        <variable constant="0" name="Debug" sid="907603791525379" static="0" type="number">0</variable>
+        <variable constant="0" name="exp_multi" sid="381544514281501" static="0" type="number">0</variable>
         <variable constant="0" name="clientid" sid="464033409579640" static="0" type="number">0</variable>
         <variable constant="0" name="var_CamScale" sid="945964702817877" static="0" type="number">0.4</variable>
         <event-group description="" sid="615628593897822" title="OnStartEvents">
@@ -51,15 +53,33 @@
                             <param id="1" name="Success callback tag">&quot;Succcess&quot;</param>
                             <param id="2" name="Error callback tag">&quot;Error&quot;</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="948202405858621" type="System">
+                            <param id="0" name="Group name">&quot;RPG elements&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="487135597029163" type="wv">
+                            <param id="0" name="Height">300</param>
+                        </action>
                     </actions>
-                </event-block>
-                <event-block sid="798011241829535">
-                    <conditions>
-                        <condition id="1" name="Add comment" sid="615586790044728" type="Comments">
-                            <param id="0" name="Comment">&quot;Load deepstream&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                    <sub-events>
+                        <event-block sid="876392658365182">
+                            <conditions>
+                                <condition id="-10" name="For" sid="137697934032103" type="System">
+                                    <param id="0" name="Name">&quot;createballs&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="881407467091526" type="System">
+                                    <param id="0" name="Object to create">Sprite2</param>
+                                    <param id="1" name="Layer">Sprite2.LayerName</param>
+                                    <param id="2" name="X">random(LayoutWidth)</param>
+                                    <param id="3" name="Y">random(LayoutHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -135,18 +155,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="165527878105743" title="Stats">
+        <event-group description="" sid="461355975177335" title="RPG elements">
             <sub-events>
-                <variable constant="0" name="var_MovSpd" sid="427712744437680" static="0" type="number">0</variable>
-                <variable constant="0" name="var_RotSpd" sid="720063938728990" static="0" type="number">0</variable>
-                <variable constant="0" name="var_WaveLngth" sid="780992017991591" static="0" type="number">0</variable>
-                <variable constant="0" name="var_WaveWidth" sid="864727878740583" static="0" type="number">0</variable>
-                <event-block sid="786190922007324">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="926322948883590" type="System" />
-                    </conditions>
-                    <actions />
-                </event-block>
+                <event-group description="" sid="981131722567118" title="Level" />
+                <event-group description="" sid="165527878105743" title="Stats" />
             </sub-events>
         </event-group>
         <event-group description="" sid="974691263515729" title="Movement">
@@ -297,9 +309,84 @@
                 <event-group description="" sid="377387514571654" title="Networked Movement" />
             </sub-events>
         </event-group>
-        <event-block sid="195538270234454">
-            <conditions />
-            <actions />
+        <event-group description="" sid="596247132314439" title="Debug">
+            <sub-events>
+                <event-block sid="971733816597725">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="288292815642580" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="291921747082106" type="Debug">
+                            <param id="0" name="Text">&quot;Debug&quot;&amp;newline&amp;&quot;Cpu usage-&quot;&amp;cpuutilisation&amp;&quot;%&quot;&amp;newline&amp;&quot;FPS-&quot;&amp;fps&amp;newline&amp;&quot;Object count-&quot;&amp;objectcount&amp;newline&amp;&quot;Renderer-&quot;&amp;renderer&amp;&quot;2.0&quot;&amp;newline&amp;&quot;Image memory usage-&quot;&amp;ImageMemoryUsage&amp;&quot;MB&quot;&amp;newline&amp;&quot;Max Exp-&quot;&amp;&quot;&quot;&amp;stat.var_MaxExp&amp;newline&amp;&quot;Current exp-&quot;&amp;&quot;&quot;&amp;stat.var_BaseExp&amp;newline&amp;&quot;Level-&quot;&amp;&quot;&quot;&amp;stat.var_Level&amp;newline&amp;&quot;Wave length-&quot;&amp;&quot;&quot;&amp;stat.var_WaveLngth&amp;newline&amp;&quot;Wave width-&quot;&amp;&quot;&quot;&amp;stat.var_WaveWidth&amp;newline&amp;&quot;Exp multiplier-&quot;&amp;&quot;&quot;&amp;stat.var_ExpMult&amp;newline&amp;&quot;Rotation speed-&quot;&amp;&quot;&quot;&amp;stat.var_RotSpd&amp;newline&amp;&quot;Movement speed-&quot;&amp;&quot;&quot;&amp;stat.var_MovSpd</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="335246963139388" title="Leveling system">
+            <sub-events>
+                <event-block sid="631852924516537">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="255237020011474" type="stat">
+                            <param id="0" name="Instance variable">var_BaseExp</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">stat.var_MaxExp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="414834211687057" type="stat">
+                            <param id="0" name="Instance variable">var_MaxExp</param>
+                            <param id="1" name="Value">stat.var_MaxExp+1000</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="818062707956897" type="stat">
+                            <param id="0" name="Instance variable">var_Level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="593416915598793" type="stat">
+                            <param id="0" name="Instance variable">var_BaseExp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="504656782411886" type="stat">
+                            <param id="0" name="Instance variable">var_WaveLngth</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="326038693548086" type="stat">
+                            <param id="0" name="Instance variable">var_WaveWidth</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="434718047012505">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="174932487485878" type="obj_Player">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="216589111252363" type="stat">
+                            <param id="0" name="Instance variable">var_BaseExp</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="448282158073960" type="Sprite2" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="392923479855186" title="Wave shit" />
+        <event-block sid="149615839261693">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="674796988442806" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="750871090114907" type="System">
+                    <param id="0" name="Object to create">wv</param>
+                    <param id="1" name="Layer">obj_Player.LayerName</param>
+                    <param id="2" name="X">obj_Player.X</param>
+                    <param id="3" name="Y">obj_Player.Y</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

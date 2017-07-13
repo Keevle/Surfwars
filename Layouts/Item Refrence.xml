@@ -97,6 +97,19 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="stat" uid="21">
+            <instance-variables>
+                <var_MovSpd>0</var_MovSpd>
+                <var_MaxExp>1000</var_MaxExp>
+                <var_BaseExp>100</var_BaseExp>
+                <var_Level>1</var_Level>
+                <var_RotSpd>0</var_RotSpd>
+                <var_WaveLngth>0</var_WaveLngth>
+                <var_WaveWidth>0</var_WaveWidth>
+                <var_ExpMult>1</var_ExpMult>
+            </instance-variables>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

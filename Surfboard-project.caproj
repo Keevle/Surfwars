@@ -13,6 +13,8 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="GameAnalytics" id="GameAnalytics" version="1">GameAnalytics</plugin>
+        <plugin author="Toby R" id="Globals" version="1">Globals</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Chris Hackmann (aka linkman2004)" id="MagiCam" version="6.5">MagiCam</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -30,9 +32,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="lens">Lens</effect>
         <effect author="Brad Larson" id="stretch">Stretch</effect>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
     </used-effects>
@@ -87,6 +91,29 @@
                     <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
                 </object-type>
             </object-folder>
+            <object-folder name="RPG">
+                <object-type global="1" name="stat" sid="833360772584043">
+                    <plugin id="Globals" />
+                    <instance-variables>
+                        <instance-variable name="var_MovSpd" sid="178498270958251" type="number" />
+                        <instance-variable name="var_MaxExp" sid="318195116799850" type="number" />
+                        <instance-variable name="var_BaseExp" sid="377163283379227" type="number" />
+                        <instance-variable name="var_Level" sid="324719182300752" type="number" />
+                        <instance-variable name="var_RotSpd" sid="325621820546171" type="number" />
+                        <instance-variable name="var_WaveLngth" sid="932414132950999" type="number" />
+                        <instance-variable name="var_WaveWidth" sid="657311155063435" type="number" />
+                        <instance-variable name="var_ExpMult" sid="377276912090206" type="number" />
+                    </instance-variables>
+                </object-type>
+            </object-folder>
+            <object-folder name="Social Media">
+                <object-type name="Facebook" sid="469593951889527">
+                    <plugin id="Facebook" />
+                </object-type>
+                <object-type name="Twitter" sid="880626584494496">
+                    <plugin id="Twitter" />
+                </object-type>
+            </object-folder>
         </object-folder>
         <object-type name="obj_Player" sid="177537848774688">
             <plugin id="Sprite" />
@@ -105,14 +132,7 @@
             </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709882233746710" speed="5">
-                    <frame duration="1" hotspotX="0.195" hotspotY="0.484536">
-                        <collision-poly>
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.490017" hotspotY="0.488613" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Surfer.io-master\Art assets\Shark Attack board.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -133,12 +153,6 @@
         </object-type>
         <object-type name="Touch" sid="134456310206624">
             <plugin id="Touch" />
-        </object-type>
-        <object-type name="Twitter" sid="880626584494496">
-            <plugin id="Twitter" />
-        </object-type>
-        <object-type name="Facebook" sid="469593951889527">
-            <plugin id="Facebook" />
         </object-type>
         <object-type global="1" name="JSON" sid="793515423051469">
             <plugin id="Rex_Hash" />
@@ -162,6 +176,11 @@
         </object-type>
         <object-type name="seawake" sid="733303738010476">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="952977635787783">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266210656932375" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Commercial Projects\seawake.PNG">
@@ -194,6 +213,65 @@
                     <behavior id="Anchor" />
                 </behavior-type>
             </behaviors>
+        </object-type>
+        <object-type name="Keyboard" sid="265133751877164">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Sprite2" sid="854097660609449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432333385628008" speed="5">
+                    <frame duration="1" hotspotX="0.500441" hotspotY="0.500739" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Surfer.io-master\Art assets\Wood.png">
+                        <collision-poly>
+                            <point x="0.146487" y="0.146487" />
+                            <point x="0.499253" y="0" />
+                            <point x="0.853513" y="0.146487" />
+                            <point x="1" y="0.499253" />
+                            <point x="0.853513" y="0.853513" />
+                            <point x="0.499253" y="1" />
+                            <point x="0.146487" y="0.853513" />
+                            <point x="0" y="0.499253" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Debug" sid="920881806163530">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="305659671854470">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="wv" sid="395864505203926">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="712937734493910">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Lens">
+                    <effect id="lens" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179000439073530" speed="5">
+                    <frame duration="1" hotspotX="0.501048" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\blackcircle.png">
+                        <collision-poly>
+                            <point x="0.146751" y="0.147679" />
+                            <point x="0.498952" y="0" />
+                            <point x="0.853249" y="0.147679" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853249" y="0.852321" />
+                            <point x="0.498952" y="1" />
+                            <point x="0.146751" y="0.852321" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -234,6 +312,7 @@
                 <secret-key></secret-key>
             </properties>
         </global-instance>
+        <global-instance type="Keyboard" uid="22" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -248,10 +327,5 @@
         </file-folder>
         <file name="deepstream.min.js" />
         <file name="firstboard.png" />
-        <file name="level_4.png" />
-        <file name="level_5.png" />
-        <file name="level_6.png" />
-        <file name="level2.png" />
-        <file name="level3.png" />
     </files-folder>
 </c2project>
