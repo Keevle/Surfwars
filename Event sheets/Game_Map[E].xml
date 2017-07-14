@@ -57,9 +57,6 @@
                             <param id="0" name="Group name">&quot;RPG elements&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action id="-6" name="Set height" sid="487135597029163" type="wv">
-                            <param id="0" name="Height">300</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="876392658365182">
@@ -72,8 +69,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="881407467091526" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">Sprite2.LayerName</param>
+                                    <param id="0" name="Object to create">obj_Wood</param>
+                                    <param id="1" name="Layer">obj_Wood.LayerName</param>
                                     <param id="2" name="X">random(LayoutWidth)</param>
                                     <param id="3" name="Y">random(LayoutHeight)</param>
                                 </action>
@@ -363,7 +360,7 @@
                 <event-block sid="434718047012505">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="174932487485878" type="obj_Player">
-                            <param id="0" name="Object">Sprite2</param>
+                            <param id="0" name="Object">obj_Wood</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -371,7 +368,10 @@
                             <param id="0" name="Instance variable">var_BaseExp</param>
                             <param id="1" name="Value">100</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="448282158073960" type="Sprite2" />
+                        <action id="3" name="Set progress" sid="726467885370437" type="hud_BoostBar">
+                            <param id="0" name="Value">hud_BoostBar.Progress + 10</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="448282158073960" type="obj_Wood" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -383,14 +383,7 @@
                     <param id="0" name="Interval (seconds)">0.1</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="750871090114907" type="System">
-                    <param id="0" name="Object to create">wv</param>
-                    <param id="1" name="Layer">obj_Player.LayerName</param>
-                    <param id="2" name="X">obj_Player.X</param>
-                    <param id="3" name="Y">obj_Player.Y</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
