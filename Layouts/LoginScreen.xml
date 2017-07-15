@@ -32,7 +32,7 @@
                 <instance type="Twitter" uid="12">
                     <properties>
                         <type>Follow</type>
-                        <share>ConstructTeam</share>
+                        <share>monorromgames</share>
                         <text>My tweet text</text>
                         <via></via>
                         <hashtags></hashtags>
@@ -44,8 +44,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>225</x>
-                        <y>281</y>
+                        <x>179</x>
+                        <y>510</y>
                         <z>0</z>
                         <width>80</width>
                         <height>30</height>

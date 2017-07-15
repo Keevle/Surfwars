@@ -36,6 +36,7 @@
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="lens">Lens</effect>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
     </used-effects>
     <configurations>
@@ -64,55 +65,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Objs">
-            <object-folder name="DataGathering">
-                <object-type name="GameAnalytics" sid="533892360908749">
-                    <plugin id="GameAnalytics" />
-                </object-type>
-                <object-type name="GM" sid="500942547634789">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712268855092636" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="C:\Users\Email\Documents\ShareX\Screenshots\2017-07\chrome_2017-07-10_12-25-10.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="LoginScreen" />
-            <object-folder name="GameMap">
-                <object-type name="TiledBackground3" sid="878365430259554">
-                    <plugin id="TiledBg" />
-                    <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
-                </object-type>
-                <object-type name="TiledBackground" sid="535699574927535">
-                    <plugin id="TiledBg" />
-                    <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
-                </object-type>
-            </object-folder>
-            <object-folder name="RPG">
-                <object-type global="1" name="stat" sid="833360772584043">
-                    <plugin id="Globals" />
-                    <instance-variables>
-                        <instance-variable name="var_MovSpd" sid="178498270958251" type="number" />
-                        <instance-variable name="var_MaxExp" sid="318195116799850" type="number" />
-                        <instance-variable name="var_BaseExp" sid="377163283379227" type="number" />
-                        <instance-variable name="var_Level" sid="324719182300752" type="number" />
-                        <instance-variable name="var_RotSpd" sid="325621820546171" type="number" />
-                        <instance-variable name="var_WaveLngth" sid="932414132950999" type="number" />
-                        <instance-variable name="var_WaveWidth" sid="657311155063435" type="number" />
-                        <instance-variable name="var_ExpMult" sid="377276912090206" type="number" />
-                    </instance-variables>
-                </object-type>
-            </object-folder>
-            <object-folder name="Social Media">
-                <object-type name="Facebook" sid="469593951889527">
-                    <plugin id="Facebook" />
-                </object-type>
-                <object-type name="Twitter" sid="880626584494496">
-                    <plugin id="Twitter" />
-                </object-type>
-            </object-folder>
-        </object-folder>
+        <object-folder name="Objs" />
         <object-type name="obj_Player" sid="177537848774688">
             <plugin id="Sprite" />
             <behaviors>
@@ -126,6 +79,7 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709882233746710" speed="5">
                     <frame duration="1" hotspotX="0.490017" hotspotY="0.488613" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Surfer.io-master\Art assets\Shark Attack board.png">
+                        <image-point name="Imagepoint 1" x="0.219624" y="-0.10559" />
                         <collision-poly>
                             <point x="0.022818" y="0.302277" />
                             <point x="0.214489" y="0.0538302" />
@@ -169,14 +123,6 @@
         </object-type>
         <object-type name="GameAnalytics2" sid="171441890981493">
             <plugin id="GameAnalytics" />
-        </object-type>
-        <object-type name="Sprite" sid="242028802063006">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676807627062576" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\blackcircle.png" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="seawake" sid="733303738010476">
             <plugin id="Sprite" />
@@ -247,6 +193,58 @@
                     <behavior id="Anchor" />
                 </behavior-type>
             </behaviors>
+        </object-type>
+        <object-type global="1" name="var_Obj" sid="833360772584043">
+            <plugin id="Globals" />
+            <instance-variables>
+                <instance-variable name="var_MovSpd" sid="178498270958251" type="number" />
+                <instance-variable name="var_MaxExp" sid="318195116799850" type="number" />
+                <instance-variable name="var_RotSpd" sid="325621820546171" type="number" />
+                <instance-variable name="var_BaseExp" sid="377163283379227" type="number" />
+                <instance-variable name="var_Level" sid="324719182300752" type="number" />
+                <instance-variable name="var_WaveLngth" sid="932414132950999" type="number" />
+                <instance-variable name="var_WaveWidth" sid="657311155063435" type="number" />
+                <instance-variable name="var_ExpMult" sid="377276912090206" type="number" />
+                <instance-variable name="wave_amount" sid="586729027809621" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Facebook" sid="469593951889527">
+            <plugin id="Facebook" />
+        </object-type>
+        <object-type name="Twitter" sid="880626584494496">
+            <plugin id="Twitter" />
+        </object-type>
+        <object-type name="obj_DebugMap" sid="535699574927535">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
+        </object-type>
+        <object-type name="obj_Map" sid="878365430259554">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Email\Desktop\Colyseus Construct 2\map-background.png" />
+        </object-type>
+        <object-type name="FullWave" sid="878183649096957">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Lens">
+                    <effect id="lens" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387532195454125" speed="5">
+                    <frame duration="1" hotspotX="0.501048" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\blackcircle.png">
+                        <collision-poly>
+                            <point x="0.146751" y="0.147679" />
+                            <point x="0.498952" y="0" />
+                            <point x="0.853249" y="0.147679" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853249" y="0.852321" />
+                            <point x="0.498952" y="1" />
+                            <point x="0.146751" y="0.852321" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

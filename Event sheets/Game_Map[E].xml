@@ -57,6 +57,10 @@
                             <param id="0" name="Group name">&quot;RPG elements&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="263683779371676" type="System">
+                            <param id="0" name="Variable">clientid</param>
+                            <param id="1" name="Value">random(1,9999999)</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="876392658365182">
@@ -152,12 +156,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="461355975177335" title="RPG elements">
-            <sub-events>
-                <event-group description="" sid="981131722567118" title="Level" />
-                <event-group description="" sid="165527878105743" title="Stats" />
-            </sub-events>
-        </event-group>
         <event-group description="" sid="974691263515729" title="Movement">
             <sub-events>
                 <event-block sid="395902507177415">
@@ -167,6 +165,10 @@
                     <actions>
                         <action id="0" name="Set text" sid="270642032749107" type="txt_ProgressDebug">
                             <param id="0" name="Text">hud_BoostBar.Progress</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="474497986796532" type="var_Obj">
+                            <param id="0" name="Instance variable">var_MovSpd</param>
+                            <param id="1" name="Value">obj_Player.Bullet.Speed</param>
                         </action>
                     </actions>
                 </event-block>
@@ -215,7 +217,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="820998027328032" type="obj_Player">
-                            <param id="0" name="Speed">350</param>
+                            <param id="0" name="Speed">450</param>
                         </action>
                         <action id="-21" name="Rotate toward position" sid="720389367878496" type="obj_Player">
                             <param id="0" name="Degrees">1.5</param>
@@ -233,7 +235,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="429775551517247" type="obj_Player">
-                            <param id="0" name="Speed">250</param>
+                            <param id="0" name="Speed">350</param>
                         </action>
                         <action id="-21" name="Rotate toward position" sid="546107194500013" type="obj_Player">
                             <param id="0" name="Degrees">1.5</param>
@@ -310,7 +312,7 @@
                 <event-group description="" sid="377387514571654" title="Networked Movement" />
             </sub-events>
         </event-group>
-        <event-group description="" sid="596247132314439" title="Debug">
+        <event-group description="Debug specefic stats that i really needed to monitor without using the default debugger cause that shits on performance and isnt good for telling if something is doing good or not due to the added stress" sid="596247132314439" title="Debug">
             <sub-events>
                 <event-block sid="971733816597725">
                     <conditions>
@@ -318,40 +320,40 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="291921747082106" type="Debug">
-                            <param id="0" name="Text">&quot;Debug&quot;&amp;newline&amp;&quot;Cpu usage-&quot;&amp;cpuutilisation&amp;&quot;%&quot;&amp;newline&amp;&quot;FPS-&quot;&amp;fps&amp;newline&amp;&quot;Object count-&quot;&amp;objectcount&amp;newline&amp;&quot;Renderer-&quot;&amp;renderer&amp;&quot;2.0&quot;&amp;newline&amp;&quot;Image memory usage-&quot;&amp;ImageMemoryUsage&amp;&quot;MB&quot;&amp;newline&amp;&quot;Max Exp-&quot;&amp;&quot;&quot;&amp;stat.var_MaxExp&amp;newline&amp;&quot;Current exp-&quot;&amp;&quot;&quot;&amp;stat.var_BaseExp&amp;newline&amp;&quot;Level-&quot;&amp;&quot;&quot;&amp;stat.var_Level&amp;newline&amp;&quot;Wave length-&quot;&amp;&quot;&quot;&amp;stat.var_WaveLngth&amp;newline&amp;&quot;Wave width-&quot;&amp;&quot;&quot;&amp;stat.var_WaveWidth&amp;newline&amp;&quot;Exp multiplier-&quot;&amp;&quot;&quot;&amp;stat.var_ExpMult&amp;newline&amp;&quot;Rotation speed-&quot;&amp;&quot;&quot;&amp;stat.var_RotSpd&amp;newline&amp;&quot;Movement speed-&quot;&amp;&quot;&quot;&amp;stat.var_MovSpd</param>
+                            <param id="0" name="Text">&quot;Debug&quot;&amp;newline&amp;&quot;Cpu usage-&quot;&amp;cpuutilisation&amp;&quot;%&quot;&amp;newline&amp;&quot;FPS-&quot;&amp;fps&amp;newline&amp;&quot;Object count(Waves)&quot;&amp;objectcount&amp;&quot;-&quot;&amp;FullWave.PickedCount&amp;newline&amp;&quot;Player speed-&quot;&amp;obj_Player.Bullet.Speed&amp;newline&amp;&quot;Renderer-&quot;&amp;renderer&amp;&quot;2.0&quot;&amp;newline&amp;&quot;Image memory usage-&quot;&amp;ImageMemoryUsage&amp;&quot;MB&quot;&amp;newline&amp;&quot;Max Exp-&quot;&amp;&quot;&quot;&amp;var_Obj.var_MaxExp&amp;newline&amp;&quot;Current exp-&quot;&amp;&quot;&quot;&amp;var_Obj.var_BaseExp&amp;newline&amp;&quot;Level-&quot;&amp;&quot;&quot;&amp;var_Obj.var_Level&amp;newline&amp;&quot;Wave L &amp; W-&quot;&amp;&quot;&quot;&amp;var_Obj.var_WaveLngth&amp;&quot;:&quot;&amp;var_Obj.var_WaveWidth&amp;newline&amp;&quot;Exp multiplier-&quot;&amp;&quot;&quot;&amp;var_Obj.var_ExpMult&amp;newline&amp;&quot;Rotation speed-&quot;&amp;&quot;&quot;&amp;var_Obj.var_RotSpd&amp;newline&amp;&quot;CameraZoom-&quot;&amp;LayoutScale&amp;newline&amp;&quot;Client id-&quot;&amp;round(clientid)</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="335246963139388" title="Leveling system">
+        <event-group description="Levels now control the waves length" sid="335246963139388" title="Leveling system">
             <sub-events>
                 <event-block sid="631852924516537">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="255237020011474" type="stat">
+                        <condition id="-7" name="Compare instance variable" sid="255237020011474" type="var_Obj">
                             <param id="0" name="Instance variable">var_BaseExp</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">stat.var_MaxExp</param>
+                            <param id="2" name="Value">var_Obj.var_MaxExp</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="414834211687057" type="stat">
+                        <action id="-11" name="Add to" sid="414834211687057" type="var_Obj">
                             <param id="0" name="Instance variable">var_MaxExp</param>
-                            <param id="1" name="Value">stat.var_MaxExp+1000</param>
+                            <param id="1" name="Value">var_Obj.var_MaxExp+100</param>
                         </action>
-                        <action id="-11" name="Add to" sid="818062707956897" type="stat">
+                        <action id="-11" name="Add to" sid="818062707956897" type="var_Obj">
                             <param id="0" name="Instance variable">var_Level</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="593416915598793" type="stat">
+                        <action id="-10" name="Set value" sid="593416915598793" type="var_Obj">
                             <param id="0" name="Instance variable">var_BaseExp</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-11" name="Add to" sid="504656782411886" type="stat">
+                        <action id="-11" name="Add to" sid="504656782411886" type="var_Obj">
                             <param id="0" name="Instance variable">var_WaveLngth</param>
                             <param id="1" name="Value">10</param>
                         </action>
-                        <action id="-11" name="Add to" sid="326038693548086" type="stat">
+                        <action id="-11" name="Add to" sid="326038693548086" type="var_Obj">
                             <param id="0" name="Instance variable">var_WaveWidth</param>
                             <param id="1" name="Value">10</param>
                         </action>
@@ -364,26 +366,81 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="216589111252363" type="stat">
+                        <action id="-11" name="Add to" sid="216589111252363" type="var_Obj">
                             <param id="0" name="Instance variable">var_BaseExp</param>
-                            <param id="1" name="Value">100</param>
+                            <param id="1" name="Value">1000</param>
                         </action>
                         <action id="3" name="Set progress" sid="726467885370437" type="hud_BoostBar">
-                            <param id="0" name="Value">hud_BoostBar.Progress + 10</param>
+                            <param id="0" name="Value">hud_BoostBar.Progress + 100</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="448282158073960" type="obj_Wood" />
+                        <action id="9" name="Set scale" sid="773513273505750" type="obj_Wood">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="998416115627792" type="obj_Wood">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="787345944347357" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="558134235116466" type="var_Obj">
+                            <param id="0" name="Instance variable">wave_amount</param>
+                            <param id="1" name="Value">0.4</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="606074261930987" type="var_Obj">
+                            <param id="0" name="Instance variable">var_MovSpd</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="784463528859196" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="232634390753516" type="var_Obj">
+                            <param id="0" name="Instance variable">var_MovSpd</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="392923479855186" title="Wave shit" />
-        <event-block sid="149615839261693">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="674796988442806" type="System">
-                    <param id="0" name="Interval (seconds)">0.1</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
+        <event-group description="Waves will destroy all obj player on collision " sid="392923479855186" title="Wave shit">
+            <sub-events>
+                <event-block sid="149615839261693">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="674796988442806" type="System">
+                            <param id="0" name="Interval (seconds)">0.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="631522269891659" type="FullWave">
+                            <param id="0" name="Height">var_Obj.var_WaveLngth</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="574816462607365" type="FullWave">
+                            <param id="0" name="Width">var_Obj.var_WaveWidth</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="975955926236838" type="FullWave">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">obj_Player</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="895542313813031" type="System">
+                            <param id="0" name="Object to create">FullWave</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">lerp(obj_Player.ImagePointX(0),obj_Player.ImagePointX(0),0.5)</param>
+                            <param id="3" name="Y">lerp(obj_Player.ImagePointY(0),obj_Player.ImagePointY(0),0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379787418348656">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="386853083234463" type="FullWave" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="851072468011560" type="System">
+                            <param id="0" name="Seconds">var_Obj.wave_amount</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="730102581507146" type="FullWave" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="placeholder" sid="511335041197916" title="Levelup(RPG system)" />
     </events>
 </c2eventsheet>

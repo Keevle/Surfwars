@@ -28,30 +28,7 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="GM" uid="3">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>66</x>
-                        <y>34</y>
-                        <z>0</z>
-                        <width>58</width>
-                        <height>56</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.50746268</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="Layer 1" sid="638965334704716">
@@ -70,27 +47,24 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GameAnalytics" uid="1">
+                <instance type="obj_Map" uid="5">
                     <properties>
-                        <build>0.1</build>
-                        <custom-user-id></custom-user-id>
-                        <enable-manual-session-handling>False</enable-manual-session-handling>
-                        <enable-info-log>True</enable-info-log>
-                        <enable-verbose-log>False</enable-verbose-log>
-                        <game-key></game-key>
-                        <secret-key></secret-key>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>66</x>
-                        <y>35</y>
+                        <x>217</x>
+                        <y>43</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>410</width>
+                        <height>551</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -98,16 +72,17 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="stat" uid="21">
+        <instance type="var_Obj" uid="21">
             <instance-variables>
                 <var_MovSpd>0</var_MovSpd>
                 <var_MaxExp>1000</var_MaxExp>
+                <var_RotSpd>0</var_RotSpd>
                 <var_BaseExp>100</var_BaseExp>
                 <var_Level>1</var_Level>
-                <var_RotSpd>0</var_RotSpd>
-                <var_WaveLngth>0</var_WaveLngth>
-                <var_WaveWidth>0</var_WaveWidth>
+                <var_WaveLngth>100</var_WaveLngth>
+                <var_WaveWidth>100</var_WaveWidth>
                 <var_ExpMult>1</var_ExpMult>
+                <wave_amount>0</wave_amount>
             </instance-variables>
         </instance>
     </nonworld-instances>
