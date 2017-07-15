@@ -7,6 +7,16 @@
         <variable constant="0" name="exp_multi" sid="381544514281501" static="0" type="number">0</variable>
         <variable constant="0" name="clientid" sid="464033409579640" static="0" type="number">0</variable>
         <variable constant="0" name="var_CamScale" sid="945964702817877" static="0" type="number">0.5</variable>
+        <event-group description="" sid="214448388665271" title="Variable Setup">
+            <sub-events>
+                <event-block sid="835612166995739">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="138664395160820" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="615628593897822" title="OnStartEvents">
             <sub-events>
                 <event-block sid="197549512418868">
@@ -67,8 +77,8 @@
                             <conditions>
                                 <condition id="-10" name="For" sid="137697934032103" type="System">
                                     <param id="0" name="Name">&quot;createballs&quot;</param>
-                                    <param id="1" name="Start index">1</param>
-                                    <param id="2" name="End index">400</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">1000</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -320,7 +330,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="291921747082106" type="Debug">
-                            <param id="0" name="Text">&quot;Debug&quot;&amp;newline&amp;&quot;Cpu usage-&quot;&amp;cpuutilisation&amp;&quot;%&quot;&amp;newline&amp;&quot;FPS-&quot;&amp;fps&amp;newline&amp;&quot;Object count(Waves)&quot;&amp;objectcount&amp;&quot;-&quot;&amp;FullWave.PickedCount&amp;newline&amp;&quot;Player speed-&quot;&amp;obj_Player.Bullet.Speed&amp;newline&amp;&quot;Renderer-&quot;&amp;renderer&amp;&quot;2.0&quot;&amp;newline&amp;&quot;Image memory usage-&quot;&amp;ImageMemoryUsage&amp;&quot;MB&quot;&amp;newline&amp;&quot;Max Exp-&quot;&amp;&quot;&quot;&amp;var_Obj.var_MaxExp&amp;newline&amp;&quot;Current exp-&quot;&amp;&quot;&quot;&amp;var_Obj.var_BaseExp&amp;newline&amp;&quot;Level-&quot;&amp;&quot;&quot;&amp;var_Obj.var_Level&amp;newline&amp;&quot;Wave L &amp; W-&quot;&amp;&quot;&quot;&amp;var_Obj.var_WaveLngth&amp;&quot;:&quot;&amp;var_Obj.var_WaveWidth&amp;newline&amp;&quot;Exp multiplier-&quot;&amp;&quot;&quot;&amp;var_Obj.var_ExpMult&amp;newline&amp;&quot;Rotation speed-&quot;&amp;&quot;&quot;&amp;var_Obj.var_RotSpd&amp;newline&amp;&quot;CameraZoom-&quot;&amp;LayoutScale&amp;newline&amp;&quot;Client id-&quot;&amp;round(clientid)&amp;newline&amp;&quot;Hud Debug:Points-Pamount-SOpen&quot;&amp;&quot; &quot;&amp;var_Huds.var_HasPoints&amp;&quot;--&quot;&amp;var_Huds.var_PointsAmounts&amp;&quot;--&quot;&amp;var_Huds.var_StatHudOpen</param>
+                            <param id="0" name="Text">&quot;Debug&quot;&amp;newline&amp;&quot;Cpu usage-&quot;&amp;cpuutilisation&amp;&quot;%&quot;&amp;newline&amp;&quot;FPS-&quot;&amp;fps&amp;newline&amp;&quot;Object count(Waves,Wood)&quot;&amp;objectcount&amp;&quot;-&quot;&amp;FullWave.PickedCount&amp;&quot; &quot;&amp;obj_Wood.PickedCount&amp;newline&amp;&quot;Player speed-&quot;&amp;obj_Player.Bullet.Speed&amp;newline&amp;&quot;Renderer-&quot;&amp;renderer&amp;&quot;2.0&quot;&amp;newline&amp;&quot;Image memory usage-&quot;&amp;ImageMemoryUsage&amp;&quot;MB&quot;&amp;newline&amp;&quot;Max Exp-&quot;&amp;&quot;&quot;&amp;var_Obj.var_MaxExp&amp;newline&amp;&quot;Current exp-&quot;&amp;&quot;&quot;&amp;var_Obj.var_BaseExp&amp;newline&amp;&quot;Level-&quot;&amp;&quot;&quot;&amp;var_Obj.var_Level&amp;newline&amp;&quot;Wave L &amp; W-&quot;&amp;&quot;&quot;&amp;var_Obj.var_WaveLngth&amp;&quot;:&quot;&amp;var_Obj.var_WaveWidth&amp;newline&amp;&quot;Exp multiplier-&quot;&amp;&quot;&quot;&amp;var_Obj.var_ExpMult&amp;newline&amp;&quot;Rotation speed-&quot;&amp;&quot;&quot;&amp;var_Obj.var_RotSpd&amp;newline&amp;&quot;CameraZoom-&quot;&amp;LayoutScale&amp;newline&amp;&quot;Client id-&quot;&amp;round(clientid)&amp;newline&amp;&quot;Hud Debug:Points-Pamount-SOpen&quot;&amp;&quot; &quot;&amp;var_Huds.var_HasPoints&amp;&quot;--&quot;&amp;var_Huds.var_PointsAmounts&amp;&quot;--&quot;&amp;var_Huds.var_StatHudOpen</param>
                         </action>
                     </actions>
                 </event-block>
@@ -384,9 +394,7 @@
                         <action id="9" name="Set scale" sid="773513273505750" type="obj_Wood">
                             <param id="0" name="Scale">2</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="998416115627792" type="obj_Wood">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="969790498230651" type="obj_Wood" />
                         <action id="-16" name="Wait" sid="787345944347357" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
@@ -418,7 +426,7 @@
                 <event-block sid="149615839261693">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="674796988442806" type="System">
-                            <param id="0" name="Interval (seconds)">dt*2</param>
+                            <param id="0" name="Interval (seconds)">dt/6</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -510,5 +518,19 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="405742066939587">
+            <conditions>
+                <condition id="0" name="On click" sid="967159148556309" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="160083762901964" type="var_Obj">
+                    <param id="0" name="Instance variable">var_WaveWidth</param>
+                    <param id="1" name="Value">200</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

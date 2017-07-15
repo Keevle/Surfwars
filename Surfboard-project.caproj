@@ -202,7 +202,7 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387532195454125" speed="5">
                     <frame duration="1" hotspotX="0.501048" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\blackcircle.png">
                         <collision-poly>
-                            <point x="0.146751" y="0.147679" />
+                            <point x="0.140462" y="0.170886" />
                             <point x="0.498952" y="0" />
                             <point x="0.853249" y="0.147679" />
                             <point x="1" y="0.5" />
