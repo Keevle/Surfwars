@@ -403,8 +403,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>138</x>
-                        <y>885</y>
+                        <x>163</x>
+                        <y>764</y>
                         <z>0</z>
                         <width>120</width>
                         <height>120</height>
@@ -430,8 +430,9 @@
         <instance type="SwitchCase" uid="15" />
         <instance type="var_Huds" uid="17">
             <instance-variables>
-                <var_HasPoints>0</var_HasPoints>
                 <var_StatHudOpen>0</var_StatHudOpen>
+                <var_HasPoints>false</var_HasPoints>
+                <var_PointsAmounts>0</var_PointsAmounts>
             </instance-variables>
         </instance>
     </nonworld-instances>

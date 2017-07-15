@@ -357,10 +357,6 @@
                             <param id="0" name="Instance variable">var_WaveWidth</param>
                             <param id="1" name="Value">10</param>
                         </action>
-                        <action id="-11" name="Add to" sid="658910421528446" type="var_Huds">
-                            <param id="0" name="Instance variable">var_HasPoints</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="4" name="Set animation" sid="863486019743061" type="Stats_button">
                             <param id="0" name="Animation">&quot;has_stats&quot;</param>
                             <param id="1" name="From">1</param>
@@ -404,6 +400,14 @@
                         <action id="-12" name="Subtract from" sid="232634390753516" type="var_Obj">
                             <param id="0" name="Instance variable">var_MovSpd</param>
                             <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="602359178329390" type="var_Huds">
+                            <param id="0" name="Instance variable">var_PointsAmounts</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="491216134561301" type="var_Huds">
+                            <param id="0" name="Instance variable">var_HasPoints</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -451,34 +455,61 @@
         </event-group>
         <event-group description="placeholder" sid="511335041197916" title="Levelup(RPG system)" />
         <event-group description="" sid="498321686842385" title="Hud stuff" />
-        <event-block sid="533111336894000">
+        <event-block sid="541227038095506">
             <conditions>
-                <condition id="0" name="On click" sid="630890623883165" type="Mouse">
+                <condition id="-1" name="Every tick" sid="529961030900386" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="772490066826299">
+                    <conditions />
+                    <actions>
+                        <action id="4" name="Set animation" sid="244955648034335" type="Stats_button">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="167981094842099">
+            <conditions>
+                <condition id="0" name="On click" sid="455600933984871" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="236439383994019" type="var_Huds">
-                    <param id="0" name="Instance variable">var_HasPoints</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="772490066826299">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="829545001305507" type="var_Huds">
-                    <param id="0" name="Instance variable">var_HasPoints</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="244955648034335" type="Stats_button">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="685900929708002">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="955220932851730" type="Stats_button">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="755743314414435" type="Stats_button">
+                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531372454800031">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="188848560557060" type="Stats_button">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="497168230926190" type="Stats_button">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
