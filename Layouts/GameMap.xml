@@ -233,18 +233,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Lens">
-                            <parameters>
-                                <magnification>1</magnification>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2385</x>
-                        <y>875</y>
+                        <x>2387</x>
+                        <y>958</y>
                         <z>0</z>
                         <width>200</width>
                         <height>200</height>
