@@ -246,6 +246,65 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Stats_button" sid="858899398224483">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="747975120817264">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367912241138723" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Realtest\Surfer.io\Art assets\no_level.png">
+                        <collision-poly>
+                            <point x="0.146868" y="0.147186" />
+                            <point x="0.49892" y="0" />
+                            <point x="0.853132" y="0.147186" />
+                            <point x="0.99784" y="0.5" />
+                            <point x="0.853132" y="0.852814" />
+                            <point x="0.49892" y="1" />
+                            <point x="0.146868" y="0.852814" />
+                            <point x="0.00215983" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="288928160852210" speed="5">
+                    <frame duration="1" hotspotX="0.500381" hotspotY="0.500381" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Realtest\Surfer.io\Art assets\stats_open.png">
+                        <collision-poly>
+                            <point x="0.375476" y="0.376049" />
+                            <point x="0.499619" y="0" />
+                            <point x="0.623762" y="0.376812" />
+                            <point x="0.999238" y="0.499619" />
+                            <point x="0.624524" y="0.623951" />
+                            <point x="0.499619" y="1" />
+                            <point x="0.374714" y="0.624714" />
+                            <point x="0" y="0.499619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="has_stats" pingpong="0" repeatcount="1" repeatto="0" sid="889801433775841" speed="5">
+                    <frame duration="1" hotspotX="0.50108" hotspotY="0.5" original-source="C:\Users\Email\Desktop\Colyseus Construct 2\_CONTRACTWORK\Realtest\Surfer.io\Art assets\stat_available.png">
+                        <collision-poly>
+                            <point x="0.146868" y="0.147186" />
+                            <point x="0.49892" y="0" />
+                            <point x="0.853132" y="0.147186" />
+                            <point x="0.99784" y="0.5" />
+                            <point x="0.853132" y="0.852814" />
+                            <point x="0.49892" y="1" />
+                            <point x="0.146868" y="0.852814" />
+                            <point x="0.00215983" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="var_Huds" sid="619592356286745">
+            <plugin id="Globals" />
+            <instance-variables>
+                <instance-variable name="var_HasPoints" sid="626334205416186" type="number" />
+                <instance-variable name="var_StatHudOpen" sid="325729408132514" type="number" />
+            </instance-variables>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

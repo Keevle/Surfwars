@@ -357,6 +357,14 @@
                             <param id="0" name="Instance variable">var_WaveWidth</param>
                             <param id="1" name="Value">10</param>
                         </action>
+                        <action id="-11" name="Add to" sid="658910421528446" type="var_Huds">
+                            <param id="0" name="Instance variable">var_HasPoints</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="863486019743061" type="Stats_button">
+                            <param id="0" name="Animation">&quot;has_stats&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="434718047012505">
@@ -442,5 +450,35 @@
             </sub-events>
         </event-group>
         <event-group description="placeholder" sid="511335041197916" title="Levelup(RPG system)" />
+        <event-group description="" sid="498321686842385" title="Hud stuff" />
+        <event-block sid="533111336894000">
+            <conditions>
+                <condition id="0" name="On click" sid="630890623883165" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="236439383994019" type="var_Huds">
+                    <param id="0" name="Instance variable">var_HasPoints</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="772490066826299">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="829545001305507" type="var_Huds">
+                    <param id="0" name="Instance variable">var_HasPoints</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="244955648034335" type="Stats_button">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

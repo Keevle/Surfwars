@@ -332,8 +332,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>183</x>
-                        <y>953</y>
+                        <x>106</x>
+                        <y>991</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -382,6 +382,39 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Stats_button" uid="0">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>Window left</left-edge>
+                                <top-edge>Window top</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>138</x>
+                        <y>885</y>
+                        <z>0</z>
+                        <width>120</width>
+                        <height>120</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -395,6 +428,12 @@
             </properties>
         </instance>
         <instance type="SwitchCase" uid="15" />
+        <instance type="var_Huds" uid="17">
+            <instance-variables>
+                <var_HasPoints>0</var_HasPoints>
+                <var_StatHudOpen>0</var_StatHudOpen>
+            </instance-variables>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
